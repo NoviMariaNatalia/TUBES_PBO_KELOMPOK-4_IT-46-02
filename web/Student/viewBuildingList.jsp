@@ -11,67 +11,17 @@
 <html>
 <head>
     <title>Buildings List</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        .buildings-container {
-            max-width: 1000px;
-            margin: 20px auto;
-        }
-        .building-card {
-            background-color: #f5f5f5;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
-            display: flex;
-            gap: 20px;
-        }
-        .building-image {
-            width: 200px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-        .building-info {
-            flex: 1;
-        }
-        .building-info h3 {
-            margin-top: 0;
-            color: #333;
-        }
-        .view-rooms-btn {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: #2196F3;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 10px;
-        }
-        .view-rooms-btn:hover {
-            background-color: #1976D2;
-        }
-        .back-btn {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: #666;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
-        .back-btn:hover {
-            background-color: #555;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="buildings-container">
-        <a href="studentDashboard.jsp" class="back-btn">Back to Dashboard</a>
-        <h1>Available Buildings</h1>
+<body class="bg-light">
+    <nav class="navbar bg-primary">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1 text-white">Buildings List</span>
+        </div>
+    </nav>
+    
+    <div class="container my-4">
+        <a href="studentDashboard.jsp" class="btn btn-secondary mb-4">Back to Dashboard</a>
         
         <%
             DatabaseConnection db = new DatabaseConnection();
@@ -81,22 +31,35 @@
                 
                 while(rs.next()) {
         %>
-                <div class="building-card">
-                    <img src="<%= rs.getString("photo") %>" alt="<%= rs.getString("name") %>" class="building-image">
-                    <div class="building-info">
-                        <h3><%= rs.getString("name") %></h3>
-                        <p><strong>Address:</strong> <%= rs.getString("address") %></p>
-                        <a href="viewRoomList.jsp?buildingId=<%= rs.getInt("id") %>" class="view-rooms-btn">View Rooms</a>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="<%= rs.getString("photo") %>" 
+                                     alt="<%= rs.getString("name") %>" 
+                                     class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-9">
+                                <h5 class="card-title text-primary"><%= rs.getString("name") %></h5>
+                                <p class="card-text">
+                                    <strong>Address:</strong> <%= rs.getString("address") %>
+                                </p>
+                                <a href="viewRoomList.jsp?buildingId=<%= rs.getInt("id") %>" 
+                                   class="btn btn-primary">View Rooms</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
         <%
                 }
             } catch(Exception e) {
-                out.println("Error: " + e.getMessage());
+                out.println("<div class='alert alert-danger'>Error: " + e.getMessage() + "</div>");
             } finally {
                 db.disconnect();
             }
         %>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
