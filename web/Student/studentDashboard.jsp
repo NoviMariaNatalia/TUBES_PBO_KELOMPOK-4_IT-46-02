@@ -9,59 +9,42 @@
 <html>
 <head>
     <title>Student Dashboard</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        .menu-container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        .menu-item {
-            background-color: #f5f5f5;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 10px 0;
-        }
-        .menu-item h3 {
-            margin-top: 0;
-            color: #333;
-        }
-        .menu-item a {
-            display: inline-block;
-            text-decoration: none;
-            color: #2196F3;
-            margin: 5px 0;
-        }
-        .menu-item a:hover {
-            text-decoration: underline;
-        }
-        .logout-btn {
-            color: #f44336 !important;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Dashboard</h1>
+<body class="bg-light">
+    <nav class="navbar bg-primary">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1 text-white">Student Dashboard</span>
+        </div>
+    </nav>
     
-    <div class="menu-container">
-        <div class="menu-item">
-            <h3>Room Booking</h3>
-            <a href="viewBuildingsList.jsp">View Buildings</a><br>
-            <a href="searchRoom.jsp">Search Room</a>
+    <div class="container my-4">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Room Booking</h5>
+            </div>
+            <div class="card-body">
+                <a href="viewBuildingsList.jsp" class="d-block text-decoration-none mb-2">View Buildings</a>
+                <a href="searchRoom.jsp" class="d-block text-decoration-none">Search Room</a>
+            </div>
         </div>
         
-        <div class="menu-item">
-            <h3>My Bookings</h3>
-            <a href="bookingHistory.jsp">View Booking History</a>
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">My Bookings</h5>
+            </div>
+            <div class="card-body">
+                <a href="bookingHistory.jsp" class="d-block text-decoration-none">View Booking History</a>
+            </div>
         </div>
         
-        <div class="menu-item">
-            <a href="../LogoutServlet" class="logout-btn">Logout</a>
+        <div class="card">
+            <div class="card-body">
+                <a href="../LogoutServlet" class="text-danger text-decoration-none">Logout</a>
+            </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
