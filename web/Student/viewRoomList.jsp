@@ -67,7 +67,7 @@
                                         <strong>Facilities:</strong><br>
                                         <%= rs.getString("facilities") %>
                                     </p>
-                                    <a href="bookRoom.jsp?roomId=<%= rs.getInt("id") %>" 
+                                    <a href="bookingForm.jsp?roomId=<%= rs.getInt("id") %>" 
                                        class="btn btn-primary">Book This Room</a>
                                 </div>
                             </div>
