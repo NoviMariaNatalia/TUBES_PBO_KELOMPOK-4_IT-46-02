@@ -24,7 +24,7 @@
                 <h5 class="mb-0">Room Booking</h5>
             </div>
             <div class="card-body">
-                <a href="viewBuildingsList.jsp" class="d-block text-decoration-none mb-2">View Buildings</a>
+                <a href="viewBuildingList.jsp" class="d-block text-decoration-none mb-2">View Buildings</a>
                 <a href="searchRoom.jsp" class="d-block text-decoration-none">Search Room</a>
             </div>
         </div>
