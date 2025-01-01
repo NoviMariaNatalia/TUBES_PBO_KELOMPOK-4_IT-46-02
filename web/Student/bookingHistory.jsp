@@ -57,9 +57,9 @@
                         <%
                             DatabaseConnection db = new DatabaseConnection();
                             String query = "SELECT b.*, r.name as room_name, bg.name as building_name FROM bookings b " +
-                                           "JOIN rooms r ON b.room_id = r.id " +
-                                           "JOIN buildings bg ON r.building_id = bg.id " +
-                                           "WHERE b.user_id = " + session.getAttribute("userId");
+                                "JOIN rooms r ON b.room_id = r.id " +
+                                "JOIN buildings bg ON r.building_id = bg.id " +
+                                "WHERE b.user_id = " + 2;
                             ResultSet rs = db.getData(query);
                             while (rs.next()) {
                         %>
@@ -80,7 +80,7 @@
                     </tbody>
                 </table>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a href="/studentDashboard.jsp" class="btn btn-primary">Selesai</a>
+                    <a href="studentDashboard.jsp" class="btn btn-primary">Selesai</a>
                 </div>
             </div>
         </div>

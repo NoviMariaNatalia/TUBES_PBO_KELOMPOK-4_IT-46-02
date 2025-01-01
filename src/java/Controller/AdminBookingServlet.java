@@ -43,9 +43,9 @@ public class AdminBookingServlet extends HttpServlet {
             pst.setInt(2, bookingId);
             pst.executeUpdate();
             
-            response.sendRedirect("Admin/viewBookingRequests.jsp?message=Booking " + status + " successfully");
+            response.sendRedirect("Admin/viewBookingRequest.jsp?message=Booking " + status + " successfully");
         } catch (Exception e) {
-            response.sendRedirect("Admin/viewBookingRequests.jsp?message=Error: " + e.getMessage());
+            response.sendRedirect("Admin/viewBookingRequest.jsp?message=Error: " + e.getMessage());
         } finally {
             db.disconnect();
         }

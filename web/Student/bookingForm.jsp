@@ -11,7 +11,10 @@
     if (session.getAttribute("username") == null) {
         response.sendRedirect("../login.jsp");
     }
+    String roomName = request.getParameter("roomName");
+    String roomId = request.getParameter("roomId");
 %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,29 +42,15 @@
             <div class="card-body">
                 <h5 class="card-title">Isi Form dibawah Ini Untuk Mengajukan Peminjaman</h5>
                 <% if (request.getParameter("message") != null) { %>
-                    <div class="alert alert-info"><%= request.getParameter("message") %></div>
+                    <div class="alert alert-danger"><%= request.getParameter("message") %></div>
                 <% } %>
 
                 <form action="../BookingServlet" method="post">
                     <div class="row mb-3 mt-5">
-                        <label for="roomId" class="col-sm-2 col-form-label">Ruangan</label>
+                        <label for="roomName" class="col-sm-2 col-form-label">Nama Ruangan</label>
                         <div class="col-sm-10">
-                            <select class="form-select" id="roomId" name="roomId" required>
-                                <option value="">Pilih Ruangan</option>
-                                    <%
-                                        DatabaseConnection db= new DatabaseConnection();
-                                        ResultSet rs = db.getData("SELECT r.id, r.name, bg.name as building_name FROM rooms r JOIN buildings bg ON r.building_id = bg.id");
-                                        while (rs.next()) {
-                                    %>
-                                <option value="<%= rs.getInt("id") %>">
-                                    <%= rs.getString("building_name") %> - <%= rs.getString("name") %>
-                                    
-                                </option>
-                                    <%
-                                    }
-                                        db.disconnect();
-                                    %>
-                            </select>
+                            <input type="text" class="form-control" id="roomName" value="<%= roomName %>" readonly>
+                            <input type="hidden" name="room_id" value="<%= roomId %>">
                         </div>
                     </div>
                     <div class="row mb-3">

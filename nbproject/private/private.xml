@@ -2,20 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/PROJECT%20PBO/TUBES_PBO_KELOMPOK-4_IT-46-02/web/Admin/addRoom.jsp</file>
-            <file>file:/D:/PROJECT%20PBO/TUBES_PBO_KELOMPOK-4_IT-46-02/web/Admin/viewBuildings.jsp</file>
-            <file>file:/D:/PROJECT%20PBO/TUBES_PBO_KELOMPOK-4_IT-46-02/web/Admin/viewBookingRequests.jsp</file>
-            <file>file:/D:/PROJECT%20PBO/TUBES_PBO_KELOMPOK-4_IT-46-02/src/java/Controller/BookingServlet.java</file>
-            <file>file:/D:/PROJECT%20PBO/TUBES_PBO_KELOMPOK-4_IT-46-02/src/java/Controller/StudentViewServlet.java</file>
-            <file>file:/D:/PROJECT%20PBO/TUBES_PBO_KELOMPOK-4_IT-46-02/web/index.jsp</file>
-            <file>file:/D:/PROJECT%20PBO/TUBES_PBO_KELOMPOK-4_IT-46-02/web/Student/bookingForm.jsp</file>
-            <file>file:/D:/PROJECT%20PBO/TUBES_PBO_KELOMPOK-4_IT-46-02/src/java/Database/DatabaseConnection.java</file>
-            <file>file:/D:/PROJECT%20PBO/TUBES_PBO_KELOMPOK-4_IT-46-02/web/Admin/addBuilding.jsp</file>
-            <file>file:/D:/PROJECT%20PBO/TUBES_PBO_KELOMPOK-4_IT-46-02/web/WEB-INF/web.xml</file>
-            <file>file:/D:/PROJECT%20PBO/TUBES_PBO_KELOMPOK-4_IT-46-02/web/Student/bookingHistory.jsp</file>
-            <file>file:/D:/PROJECT%20PBO/TUBES_PBO_KELOMPOK-4_IT-46-02/web/Student/studentDashboard.jsp</file>
-            <file>file:/D:/PROJECT%20PBO/TUBES_PBO_KELOMPOK-4_IT-46-02/src/java/Controller/AdminBookingServlet.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

@@ -94,7 +94,7 @@
                     <div class="card-body">
                         <h3 class="card-title text-center mb-4">Manajemen Peminjaman</h3>
                         <div class="d-grid gap-2">
-                            <a href="viewBookingRequests.jsp" class="btn btn-outline-warning btn-menu">Lihat Permintaan Peminjaman</a>
+                            <a href="viewBookingRequest.jsp" class="btn btn-outline-warning btn-menu">Lihat Permintaan Peminjaman</a>
                             <a href="viewBookingHistory.jsp" class="btn btn-outline-warning btn-menu">Lihat Riwayat Peminjaman</a>
                         </div>
                     </div>
