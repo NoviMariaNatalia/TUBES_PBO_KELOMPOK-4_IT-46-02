@@ -21,7 +21,7 @@
     </nav>
     
     <div class="container my-4">
-        <a href="viewBuildingsList.jsp" class="btn btn-secondary mb-4">Back to Buildings</a>
+        <a href="viewBuildingList.jsp" class="btn btn-secondary mb-4">Back to Buildings</a>
         
         <%
             int buildingId = Integer.parseInt(request.getParameter("buildingId"));
